@@ -3,6 +3,9 @@ import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
 
+
+
+
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
@@ -10,16 +13,21 @@ import { Router } from '@angular/router';
 })
 export class EmployeeListComponent implements OnInit {
 
+    
+    //The employees will hold the JSON that will be recieved from the backend 
     employees:any;
-    message:any = "";
+    deletedMessage:any = "";
     isDeleted:boolean = false;
+    employee:Employee = new Employee("","","");
+    
+    
 
   constructor(private employeeService:EmployeeService, private router:Router) { }
 
-  
+   
   ngOnInit(): void {
     this.getAllEmployees();
-   
+    
   }
   
   
@@ -32,15 +40,22 @@ export class EmployeeListComponent implements OnInit {
 
   public deleteEmployee(id:number){
    let response= this.employeeService.deleteEmployee(id);
-    response.subscribe(data=>{
-      this.employees = data;
-      this.isDeleted = true;
-      this.message = "Employee with the id " + id + " was successfully deleted";
-    });
-    
-   
+      response.subscribe(data=>{
+        this.employees = data;
+        this.isDeleted = true;
+        this.deletedMessage = "Employee with the id " + id + " was successfully deleted";
+      });
+     
   }
 
-    
+  // public getEmployeeById(id:number){
+  //   let response = this.employeeService.getEmployeeById(id);
+  //   response.subscribe(data=>{
+  //     this.employee = data;
+  //     this.router.navigate(['employee-info']);
+  //   })
+  // }
+
+  
 
 }

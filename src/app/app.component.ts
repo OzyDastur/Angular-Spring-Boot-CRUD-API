@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CRUD-Angular';
+  title = 'EMPLOYEE MANAGEMENT SYSTEM AND PORTAL';
 
   
 
