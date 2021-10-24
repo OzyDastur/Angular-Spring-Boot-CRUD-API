@@ -48,13 +48,7 @@ export class EmployeeListComponent implements OnInit {
      
   }
 
-  // public getEmployeeById(id:number){
-  //   let response = this.employeeService.getEmployeeById(id);
-  //   response.subscribe(data=>{
-  //     this.employee = data;
-  //     this.router.navigate(['employee-info']);
-  //   })
-  // }
+
 
   
 
