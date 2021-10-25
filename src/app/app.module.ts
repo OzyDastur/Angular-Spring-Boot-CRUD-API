@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { EmployeeInfoComponent } from './employee-info/employee-info.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EmployeeInfoComponent } from './employee-info/employee-info.component';
     EmployeeListComponent,
     CreateEmployeeComponent,
     UpdateEmployeeComponent,
-    EmployeeInfoComponent
+    EmployeeInfoComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

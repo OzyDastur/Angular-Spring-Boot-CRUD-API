@@ -19,6 +19,7 @@ export class EmployeeListComponent implements OnInit {
     deletedMessage:any = "";
     isDeleted:boolean = false;
     employee:Employee = new Employee("","","");
+  
     
     
 
